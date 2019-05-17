@@ -1,0 +1,41 @@
+@import "../../scss/variables";
+
+.card {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: left;
+  padding: $grid-gap;
+
+  &__title {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: $font-weight-heavy;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    color: $diesel-dark;
+  }
+
+  &__teaser {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: $font-weight-normal;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: $diesel-dark;
+
+    a {
+      color: $green-darker;
+    }
+  }
+
+  &--featured {
+    text-align: center;
+
+    .card__title {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
