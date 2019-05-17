@@ -1,0 +1,21 @@
+@import "../../../scss/variables";
+
+.list-item {
+  position: relative;
+  padding-left: 50px;
+  font-family: $font-family;
+  text-align: left;
+  list-style: none;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  margin-bottom: $grid-gap;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 23px;
+    left: 0;
+    background-image: url('../../../img/check.png');
+  }
+}

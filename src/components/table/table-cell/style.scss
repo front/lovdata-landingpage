@@ -1,0 +1,43 @@
+@import "../../../scss/variables";
+
+.table-cell {
+  box-sizing: border-box;
+  padding: $grid-gap / 2 $grid-gap;
+  text-align: left;
+
+  font-family: $font-family;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 33px;
+
+  &--bordered {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    text-align: center;
+    box-shadow: $box-shadow;
+
+    &:before {
+      content: '';
+      background: #fafafa;
+      position: absolute;
+      bottom: 0;
+      height: $grid-gap / 2;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      background: #fafafa;
+      position: absolute;
+      top: 0;
+      height: $grid-gap / 2;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import "../../scss/variables";
+
+.list {
+  text-align: left;
+
+  &__title {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: $font-weight-normal;
+    font-size: 22px;
+    line-height: 140%;
+    color: #1C1C1C;
+    margin-bottom: $grid-gap;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}

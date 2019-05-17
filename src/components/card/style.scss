@@ -1,7 +1,7 @@
 @import "../../scss/variables";
 
 .card {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: $box-shadow;
   border-radius: 8px;
   text-align: left;
   padding: $grid-gap;
