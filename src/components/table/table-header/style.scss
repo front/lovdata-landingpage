@@ -1,16 +1,23 @@
 @import "../../../scss/variables";
+@import "../../../scss/grid";
 
 .table-header {
   box-sizing: border-box;
-  padding: $grid-gap;
   background-color: white;
-
   text-align: center;
 
   font-family: $font-family;
   font-weight: normal;
-  font-size: 22px;
+  font-size: 14px;
   line-height: 33px;
+  word-break: break-all;
+
+  padding: $grid-gap / 3;
+
+  @include for-tablet-landscape-up {
+    font-size: 22px;
+    padding: $grid-gap;
+  }
 
   &--bordered {
     position: relative;
@@ -25,10 +32,14 @@
       background: white;
       position: absolute;
       bottom: 0;
-      height: $grid-gap;
+      height: $grid-gap / 3;
       left: 0;
       right: 0;
       z-index: 1;
+
+      @include for-tablet-landscape-up {
+        height: $grid-gap;
+      }
     }
   }
 }

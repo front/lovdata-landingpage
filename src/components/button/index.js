@@ -38,6 +38,7 @@ function Button({ className, children, primary, href, onClick }) {
 }
 
 Button.propTypes = {
+  className: PropTypes.string,
   primary: PropTypes.bool,
   href: PropTypes.string,
 };

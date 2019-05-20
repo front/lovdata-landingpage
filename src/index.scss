@@ -1,63 +1,6 @@
 @import 'scss/variables';
+@import 'scss/fonts';
 @import 'scss/grid';
-
-// FONTS
-// SF UI Display
-// -------------------
-/* Light */
-// @font-face {
-//   font-family: 'SF UI Display';
-//   font-weight: $font-weight-light;
-//   src: url('/fonts/SF-UI-Display-Light.otf') format('opentype');
-// }
-
-/* Regular */
-@font-face {
-  font-family: 'SF UI Display';
-  font-weight: $font-weight-normal;
-  src: url('/fonts/SF-UI-Display-Regular.otf') format('opentype');
-}
-
-/* Semibold */
-@font-face {
-  font-family: 'SF UI Display';
-  font-weight: $font-weight-semibold;
-  src: url('/fonts/SF-UI-Display-Semibold.otf') format('opentype');
-}
-
-
-/* Bold */
-@font-face {
-  font-family: 'SF UI Display';
-  font-weight: $font-weight-bold;
-  src: url('/fonts/SF-UI-Display-Bold.otf') format('opentype');
-}
-
-/* Heavy */
-@font-face {
-  font-family: 'SF UI Display';
-  font-weight: $font-weight-heavy;
-  src: url('/fonts/SF-UI-Display-Heavy.otf') format('opentype');
-}
-
-/* Black */
-@font-face {
-  font-family: 'SF UI Display';
-  font-weight: $font-weight-black;
-  src: url('/fonts/sf-ui-display/sf-ui-display-black.otf') format('opentype');
-}
-
-// https://icomoon.io
-@font-face {
-  font-family: 'icomoon';
-  src: url('/fonts/icomoon.eot?ocijqv');
-  src: url('/fonts/icomoon.eot?ocijqv#iefix') format('embedded-opentype'),
-    url('/fonts/icomoon.ttf?ocijqv') format('truetype'),
-    url('/fonts/icomoon.woff?ocijqv') format('woff'),
-    url('/fonts/icomoon.svg?ocijqv#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 
 body {
   margin: 0;
@@ -82,8 +25,10 @@ section {
     line-height: 38px;
   }
 
-  .list {
-    margin-left: $grid-gap;
+  @include for-tablet-landscape-up {
+    .list {
+      margin-left: $grid-gap;
+    }
   }
 
   .btn {

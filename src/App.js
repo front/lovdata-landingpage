@@ -1,21 +1,26 @@
 import React, { Fragment } from 'react';
 
-import HeaderSection from './layout/header-section';
-import TeaserSection from './layout/teaser-section';
-import FormSection from './layout/form-section';
-import FooterSection from './layout/footer-section';
+import {
+  HeaderSection,
+  FooterSection,
+  FormSection,
+  TeaserSection,
+} from './layout';
 
-import Card from './components/card';
-import Comment from './components/comment';
-import List from './components/list';
-import ListItem from './components/list/list-item';
-import Button from './components/button';
-import Field from './components/field';
-import Table from './components/table';
-import TableRow from './components/table/table-row';
-import TableHeader from './components/table/table-header';
-import TableCell from './components/table/table-cell';
-import TableFooter from './components/table/table-footer';
+import {
+  Button,
+  Card,
+  Comment,
+  Field,
+  List,
+  ListItem,
+  Table,
+  TableCell,
+  TableFooter,
+  TableHeader,
+  TableRow,
+  VideoPlayer,
+} from './components';
 
 import check from './img/icon-check.png';
 
@@ -38,14 +43,14 @@ function App () {
           </div>
 
           <div className="col-6">
-            <canvas id="canvas"></canvas>
+            <VideoPlayer src="https://www.youtube.com/embed/tgbNymZ7vqY" />
           </div>
         </div>
       </HeaderSection>
 
       <section className="cards-section">
         <div className="container">
-          <h2>Lovdata Pro fordeler</h2>
+          <h2>Lovdata Pro- fordeler</h2>
           <div className="row">
             <div className="col-7">
               <div className="row">
@@ -89,7 +94,7 @@ function App () {
             <Card
               featured
               icon="calendar"
-              title="Fri bruk ut 2019"
+              title="Få 3 måneder gratis"
               teaser={ [
                 'Få 3 måneder gratis med å ',
                 <span
@@ -107,8 +112,8 @@ function App () {
           <Table>
             <TableRow body={false}>
               <TableHeader></TableHeader>
-              <TableHeader bordered>LovData <b>Pro</b></TableHeader>
-              <TableHeader bordered>LovData<b>.no</b></TableHeader>
+              <TableHeader bordered>Lovdata Pro</TableHeader>
+              <TableHeader bordered>Lovdata.no</TableHeader>
             </TableRow>
 
             <TableRow>
@@ -218,36 +223,30 @@ function App () {
             <Field label="Firmanavn (Fylles ut automatisk)" />
             <Field label="Organisasjonsnummer" />
             <Field label="Kontaktperson" />
-            <Field label="Telefonnummer" />
-            <Field label="E-postadresse" />
-            <Button>Send tilgang</Button>
+            <Field label="Telefonnummer" type="phone" />
+            <Field label="E-postadresse" type="email" />
+            <Button primary>Få 3 måneder gratis</Button>
           </div>
         </div>
       </FormSection>
 
       <section className="comments-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-1"></div>
-            <div className="col-10">
-              <Comment
-                author="Maria Sivertsen"
-                authorImg="Maria Sivertsen"
-                company="Elektroskandia Norge AS"
-                date="16.05.2019"
-              >“Lovdata Pro hjelper oss med å holde vår bedrift oppdatert på endringer i Lovverket. Som Compliance Manager er det viktig å kunne få varslinger på regelverk innenfor vår industri og arbeidsmiljø”.</Comment>
-            </div>
-          </div>
-        </div>
+        <Comment
+          author="Maria Sivertsen"
+          authorImg="Maria Sivertsen"
+          company="Elektroskandia Norge AS"
+          date="16.05.2019"
+        >“Lovdata Pro hjelper oss med å holde vår bedrift oppdatert på endringer i Lovverket. <br />Som Compliance Manager er det viktig å kunne få varslinger på regelverk innenfor vår industri og arbeidsmiljø”.</Comment>
       </section>
 
       <FooterSection>
-        <h2>Dette er Lovdata PRO</h2>
         <div className="row">
           <div className="col-9">
+            <h2>Dette er Lovdata Pro</h2>
             <p>Lovdata Pro gjør det enklerer for bedrifter å holde seg oppdatert  på endringer i relevant regelverk. Lovdata Pro er et juridisk verktøy som holder dere i bedriften oppdatert på rettsområder og samtidig gir gode søkemuligheter til det relevante dokumentet.</p>
             <p>Tilgang til historiske kilder, rundskriv, rettsavgjørelser, uttalelser og vedtak.</p>
             <p>Enten dine ansatte jobber som jurist, HR, HMS, eller har andre oppgaver der dere jobber med regelverket, vil dere alltid være oppdatert.</p>
+            <p>Vil du vite mer om Lovdata Pro <Button>Klikk her</Button></p>
           </div>
         </div>
       </FooterSection>

@@ -14,7 +14,7 @@ function Comment({className, children, author, authorImg, company, date}) {
 
   return (
     <div className={classes}>
-      <img src={authorImg} alt={author} />
+      {/* <img src={authorImg} alt={author} /> */}
       <p className="comment__body">{children}</p>
       <div className="comment__author">{author}, <span>{company}</span></div>
       <div className="comment__date">{date}</div>

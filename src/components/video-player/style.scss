@@ -1,0 +1,25 @@
+@import "../../scss/variables";
+
+.video-player {
+  &:before {
+    content: '';
+    display: inline-block;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    background-image: url('./play-button.png');
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  iframe {
+    display: none;
+    border: none;
+  }
+}

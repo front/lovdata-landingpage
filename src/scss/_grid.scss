@@ -1,27 +1,56 @@
 @import "./variables";
 
+// media queries
+@mixin for-phone-only {
+  @media (max-width: $break-phone - 1) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: $break-phone) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: $break-tablet-portait) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: $break-tablet-landscape) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: $break-tablet-desktop) { @content; }
+}
+
 .container {
+  display: block;
+  padding: 0 15px;
   max-width: $container-width;
-  align-content: start;
   margin-left: auto;
   margin-right: auto;
+
+  @include for-desktop-up {
+    padding: 0;
+  }
 }
 
 .row {
   display: grid;
   grid-template-columns: repeat($grid-columns, 1fr);
-  grid-gap: $grid-gap;
+  grid-gap: $grid-gap / 2;
 
   grid-column: span $grid-columns;
+
+  @include for-tablet-landscape-up {
+    grid-gap: $grid-gap;
+  }
 }
 
 @mixin grid-generator() {
 	@for $i from 1 through $grid-columns {
 		.col-#{$i} {
-			grid-column: span $i;
+      grid-column: span $grid-columns;
+
+      @include for-tablet-landscape-up {
+        grid-column: span $i;
+      }
 		}
 	}
 }
 
 @include grid-generator();
-

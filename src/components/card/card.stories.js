@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Card from './index';
+import { Button } from '../index';
 
 storiesOf('Basics|Card', module)
   .add('all cards', () =>
@@ -16,7 +17,7 @@ storiesOf('Basics|Card', module)
         featured
         icon="calendar"
         title="Fri bruk ut 2019"
-        teaser={ ['Få 3 måneder gratis med å ', <a href='#'>bestille nå</a>]}
+        teaser={ ['Få 3 måneder gratis med å ', <Button>bestille nå</Button>]}
       />
     </div>
   </div>

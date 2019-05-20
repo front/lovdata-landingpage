@@ -16,9 +16,9 @@
   &__body {
     font-family: $font-family;
     font-weight: $font-weight-normal;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 160%;
-    color: #1C1C1C;
+    color: $cod-gray;
     margin: 0;
     margin-bottom: $grid-gap;
   }
@@ -28,13 +28,13 @@
     font-weight: $font-weight-normal;
     font-size: 16px;
     line-height: 160%;
-    color: #1C1C1C;
+    color: $cod-gray;
 
     span {
       font-weight: $font-weight-normal;
       font-size: 16px;
       line-height: 180%;
-      color: #5B5B5B;
+      color: $scorpion;
     }
   }
 
@@ -44,6 +44,6 @@
     font-size: 14px;
     line-height: 180%;
 
-    color: #5B5B5B;
+    color: $scorpion;
   }
  }

@@ -4,12 +4,10 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 function TableRow({ children, columns, body }) {
-  const classes = `table-row${body ? ' table-row--has-background' : ''}`;
+  const classes = `table-row table-row--has-${columns}-cols${body ? ' table-row--has-background' : ''}`;
 
   return (
-    <div
-      className={classes}
-      style={{gridTemplateColumns: `repeat(${columns}, 1fr)`}}>
+    <div className={classes}>
       {children}
     </div>
   );

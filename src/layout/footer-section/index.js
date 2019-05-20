@@ -3,7 +3,6 @@ import React from 'react';
 import './style.scss';
 
 function FooterSection({ children} ) {
-
   return (
     <section className="footer-section">
       <div className="container">

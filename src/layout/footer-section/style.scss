@@ -15,6 +15,7 @@
   color: white;
 
   h2 {
+    width: 100%;
     font-family: $font-family;
     font-style: normal;
     font-weight: $font-weight-semibold;
@@ -31,8 +32,13 @@
     font-size: 18px;
     line-height: 160%;
     margin: 0;
-    margin-bottom: $grid-gap;
+    margin-bottom: $grid-gap / 2;
     color: rgba(255, 255, 255, 0.9);
+  }
+
+  .btn {
+    min-width: 190px;
+    margin-left: $grid-gap / 2;
   }
 
   footer {

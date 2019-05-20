@@ -1,4 +1,5 @@
 @import "../../scss/variables";
+@import "../../scss/grid";
 
 .form-section {
   padding: 3 * $grid-gap 0;
@@ -23,9 +24,23 @@
     margin-bottom: $grid-gap;
   }
 
-  input,
-  button {
+  .field,
+  .btn {
     width: 100%;
     box-sizing: border-box;
+  }
+  @include for-tablet-landscape-up {
+    .field[type=phone],
+    .field[type=email] {
+      width: calc(50% - 15px);
+    }
+
+    .field[type=phone] {
+      margin-right: 15px;
+    }
+
+    .field[type=email] {
+      margin-left: 15px;
+    }
   }
 }
