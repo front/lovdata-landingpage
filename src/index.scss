@@ -1,14 +1,15 @@
 @import 'scss/variables';
+@import 'scss/grid';
 
 // FONTS
 // SF UI Display
 // -------------------
 /* Light */
-@font-face {
-  font-family: 'SF UI Display';
-  font-weight: $font-weight-light;
-  src: url('/fonts/SF-UI-Display-Light.otf') format('opentype');
-}
+// @font-face {
+//   font-family: 'SF UI Display';
+//   font-weight: $font-weight-light;
+//   src: url('/fonts/SF-UI-Display-Light.otf') format('opentype');
+// }
 
 /* Regular */
 @font-face {
@@ -49,8 +50,8 @@
 // https://icomoon.io
 @font-face {
   font-family: 'icomoon';
-  src:  url('/fonts/icomoon.eot?ocijqv');
-  src:  url('/fonts/icomoon.eot?ocijqv#iefix') format('embedded-opentype'),
+  src: url('/fonts/icomoon.eot?ocijqv');
+  src: url('/fonts/icomoon.eot?ocijqv#iefix') format('embedded-opentype'),
     url('/fonts/icomoon.ttf?ocijqv') format('truetype'),
     url('/fonts/icomoon.woff?ocijqv') format('woff'),
     url('/fonts/icomoon.svg?ocijqv#icomoon') format('svg');
@@ -64,17 +65,37 @@ body {
   font-size: 16px;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat($grid-columns, $grid-column-width);
-  grid-gap: $grid-gap;
-
-  max-width: $container-width;
-  align-content: start;
-  margin-left: auto;
-  margin-right: auto;
+section {
+  box-sizing: border-box;
 }
 
-.row {
-  grid-column: 1 / span $grid-columns;
+.cards-section {
+  padding: 2 * $grid-gap 0;
+
+  h2 {
+    margin: 0;
+    margin-bottom: $grid-gap;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: $font-weight-normal;
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .list {
+    margin-left: $grid-gap;
+  }
+
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.table-section {
+  padding: 3 * $grid-gap 0;
+}
+
+.comments-section {
+  padding: 2 * $grid-gap 0;
 }

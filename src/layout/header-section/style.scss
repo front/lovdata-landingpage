@@ -1,0 +1,53 @@
+@import "../../scss/variables";
+
+.header-section {
+  padding: $grid-gap 0;
+  min-height: 600px;
+
+  background-image: url('./background.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto;
+
+  color: white;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3 * $grid-gap;
+
+    h2 {
+      margin: 0px;
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: $font-weight-normal;
+      font-size: 22px;
+      line-height: 33px;
+
+      b {
+        font-weight: $font-weight-semibold;
+      }
+    }
+  }
+
+  h1 {
+    margin: 0px;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: $font-weight-heavy;
+    font-size: 40px;
+
+    margin-bottom: $grid-gap;
+  }
+
+  p {
+    margin: 0px;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: $font-weight-semibold;
+    font-size: 18px;
+    line-height: 160%;
+    margin-bottom: $grid-gap / 2;
+  }
+}

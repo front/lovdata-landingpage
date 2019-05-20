@@ -1,15 +1,16 @@
-@import "../../scss/variables";
+@import '../../scss/variables';
 
 .btn {
   display: inline-block;
   padding: 11px 32px;
   border-radius: 24px;
   border: none;
-  color :white;
+
   background-color: $diesel;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  color :white;
 
-  font-family: 'SF-UI-Display-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: $font-family;
   font-style: normal;
   font-size: 16px;
   line-height: 24px;

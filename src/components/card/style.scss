@@ -5,6 +5,9 @@
   border-radius: 8px;
   text-align: left;
   padding: $grid-gap;
+  background-color: white;
+  min-height: 306px;
+  box-sizing: border-box;
 
   &__title {
     font-family: $font-family;
@@ -25,13 +28,15 @@
     letter-spacing: 0.02em;
     color: $diesel-dark;
 
-    a {
+    &__link {
+      cursor: pointer;
       color: $green-darker;
     }
   }
 
   &--featured {
     text-align: center;
+    min-height: auto;
 
     .card__title {
       font-size: 32px;

@@ -1,0 +1,23 @@
+@import "../../scss/variables";
+
+.teaser-section {
+  padding: 3 * $grid-gap 0 0;
+  min-height: 472px;
+
+  background-image: url('./background.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto;
+
+  color: white;
+
+  h2 {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: $font-weight-semibold;
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1.5 * $grid-gap;
+  }
+}

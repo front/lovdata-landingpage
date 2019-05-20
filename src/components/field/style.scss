@@ -1,4 +1,4 @@
-@import "../../../scss/variables";
+@import '../../scss/variables';
 
 .field {
   padding: 13px 18px;
@@ -11,6 +11,9 @@
   font-size: 16px;
   line-height: 135%;
   color: #5B5B5B;
+
+  margin: 0;
+  margin-bottom: $grid-gap;
 
   &:focus {
     outline: none;

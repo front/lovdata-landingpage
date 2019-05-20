@@ -7,7 +7,7 @@ import TableFooter from './table-footer';
 import TableCell from './table-cell';
 import TableRow from './table-row';
 
-import check from '../../img/check.png';
+import check from '../../img/icon-check.png';
 
 storiesOf('Basics|Table', module)
   .add('all tables', () =>

@@ -3,8 +3,18 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-function Button({ children, primary, href }) {
-  const classes = `btn${primary ? ' btn--primary' : ''}`;
+function Button({ className, children, primary, href, onClick }) {
+  let classes = [`btn`];
+
+  if (primary) {
+    classes.push(`btn--primary`);
+  }
+
+  if (className) {
+    classes.push(className);
+  }
+
+  classes = classes.join(' ');
 
   if (href) {
     return (
@@ -19,6 +29,7 @@ function Button({ children, primary, href }) {
       <button
         className={classes}
         type="button"
+        onClick={onClick}
       >
         {children}
       </button>
