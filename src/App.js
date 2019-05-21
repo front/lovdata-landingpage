@@ -22,7 +22,7 @@ import {
   VideoPlayer,
 } from './components';
 
-import check from './img/icon-check.png';
+import check from './img/icon-check.svg';
 
 function App () {
   let formRef = React.createRef();
@@ -38,12 +38,12 @@ function App () {
           <div className="col-6">
             <h1>Ditt viktigste juridiske arbeidsverktøy</h1>
             <p>Er din bedrift og ansatte fullstendig oppdatert på lover og regelverk innenfor fagfeltet dere jobber? </p>
-            <p>Med Lovdata Pro får du varslinger på endringer og oppdateringer i lovverket.  Få varslinger på epost i rettsområdet som interesserer din bedrift</p>
+            <p>Med Lovdata Pro får du varslinger på endringer og oppdateringer i lovverket. Få varslinger på epost i rettsområdet som interesserer din bedrift</p>
             <p>Alt på ett sted- ryddig, relevant og digitalt!</p>
           </div>
 
           <div className="col-6">
-            <VideoPlayer src="https://www.youtube.com/embed/tgbNymZ7vqY" />
+            <VideoPlayer />
           </div>
         </div>
       </HeaderSection>
@@ -215,7 +215,7 @@ function App () {
         </div>
       </section>
 
-      <FormSection refProp={ formRef }>
+      <FormSection refProp={formRef}>
         <div className="row">
           <div className="col-3"></div>
           <div className="col-6">
@@ -241,7 +241,7 @@ function App () {
 
       <FooterSection>
         <div className="row">
-          <div className="col-9">
+          <div className="col-10">
             <h2>Dette er Lovdata Pro</h2>
             <p>Lovdata Pro gjør det enklerer for bedrifter å holde seg oppdatert  på endringer i relevant regelverk. Lovdata Pro er et juridisk verktøy som holder dere i bedriften oppdatert på rettsområder og samtidig gir gode søkemuligheter til det relevante dokumentet.</p>
             <p>Tilgang til historiske kilder, rundskriv, rettsavgjørelser, uttalelser og vedtak.</p>

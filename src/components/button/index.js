@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import './style.scss';
 
@@ -36,15 +35,5 @@ function Button({ className, children, primary, href, onClick }) {
     );
   }
 }
-
-Button.propTypes = {
-  className: PropTypes.string,
-  primary: PropTypes.bool,
-  href: PropTypes.string,
-};
-
-Button.defaultProps = {
-  primary: false,
-};
 
 export default Button;

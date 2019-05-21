@@ -1,4 +1,4 @@
-@import "../../scss/variables";
+@import "../../scss/common";
 
 .footer-section {
   display: flex;
@@ -17,23 +17,23 @@
   h2 {
     width: 100%;
     font-family: $font-family;
-    font-style: normal;
     font-weight: $font-weight-semibold;
     font-size: 32px;
     line-height: 38px;
+
     margin: 0;
     margin-bottom: $grid-gap;
   }
 
   p {
     font-family: $font-family;
-    font-style: normal;
     font-weight: $font-weight-semibold;
     font-size: 18px;
     line-height: 160%;
+    color: rgba(255, 255, 255, 0.9);
+
     margin: 0;
     margin-bottom: $grid-gap / 2;
-    color: rgba(255, 255, 255, 0.9);
   }
 
   .btn {

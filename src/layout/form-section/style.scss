@@ -1,5 +1,4 @@
-@import "../../scss/variables";
-@import "../../scss/grid";
+@import "../../scss/common";
 
 .form-section {
   padding: 3 * $grid-gap 0;
@@ -15,13 +14,12 @@
   h3 {
     text-align: center;
     font-family: $font-family;
-    font-style: normal;
     font-weight: $font-weight-semibold;
     font-size: 36px;
     line-height: 43px;
 
     margin: 0;
-    margin-bottom: $grid-gap;
+    margin-bottom: $grid-gap * 2;
   }
 
   .field,

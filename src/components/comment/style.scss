@@ -1,17 +1,7 @@
-@import "../../scss/variables";
+@import "../../scss/common";
 
 .comment {
   text-align: center;
-
-  img {
-    display: inline-block;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin: 0;
-    margin-bottom: $grid-gap;
-    background-color: black;
-  }
 
   &__body {
     font-family: $font-family;
@@ -19,6 +9,7 @@
     font-size: 24px;
     line-height: 160%;
     color: $cod-gray;
+
     margin: 0;
     margin-bottom: $grid-gap;
   }

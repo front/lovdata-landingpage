@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Icon from '../icon';
 
@@ -27,13 +26,5 @@ function Card({className, children, featured, icon, title, teaser}) {
     </div>
   );
 }
-
-Card.propTypes = {
-  featured: PropTypes.bool,
-};
-
-Card.defaultProps = {
-  featured: false,
-};
 
 export default Card;

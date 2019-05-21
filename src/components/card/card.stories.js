@@ -2,7 +2,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Card from './index';
-import { Button } from '../index';
 
 storiesOf('Basics|Card', module)
   .add('all cards', () =>
@@ -13,12 +12,18 @@ storiesOf('Basics|Card', module)
     <Card key="card-groups" icon="groups" title="Grupper" teaser="Del dokumenter og merknader med dine kolleger og andre Lovdata Pro brukere." />
 
     <div style={{ gridColumn: '2 / 4' }}>
-      <Card
-        featured
-        icon="calendar"
-        title="Fri bruk ut 2019"
-        teaser={ ['Få 3 måneder gratis med å ', <Button>bestille nå</Button>]}
-      />
+    <Card
+      featured
+      icon="calendar"
+      title="Få 3 måneder gratis"
+      teaser={ [
+        'Få 3 måneder gratis med å ',
+        <span
+          key="card-teaser-link"
+          className="card__teaser__link"
+          onClick={ alert('Hello!') }>bestille nå</span>
+      ]}
+    />
     </div>
   </div>
 );

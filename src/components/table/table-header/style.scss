@@ -1,13 +1,12 @@
-@import "../../../scss/variables";
-@import "../../../scss/grid";
+@import "../../../scss/common";
 
 .table-header {
   box-sizing: border-box;
   background-color: white;
   text-align: center;
 
-  font-family: $font-family;
-  font-weight: normal;
+  font-family: $font-family-secondary;
+  font-weight: bold;
   font-size: 14px;
   line-height: 33px;
   word-break: break-all;

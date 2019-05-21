@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './style.scss';
 
@@ -7,10 +8,23 @@ function VideoPlayer({ children, src }) {
 
   return (
     <div className={classes}>
-      <iframe title="iframe" width="100%" height="365" src={src}></iframe>
+      <div className="video-player__button"></div>
+      <iframe
+        className="video-player__iframe"
+        title="iframe"
+        src={src}
+      ></iframe>
     </div>
   );
 }
+
+VideoPlayer.propTypes = {
+  src: PropTypes.string,
+};
+
+VideoPlayer.defaultProps = {
+  src: 'https://player.vimeo.com/video/264438288?title=0&byline=0',
+};
 
 export default VideoPlayer;
 

@@ -1,4 +1,4 @@
-@import "../../scss/variables";
+@import "../../scss/common";
 
 .card {
   box-shadow: $box-shadow;
@@ -11,7 +11,6 @@
 
   &__title {
     font-family: $font-family;
-    font-style: normal;
     font-weight: $font-weight-heavy;
     font-size: 22px;
     line-height: 26px;
@@ -21,7 +20,6 @@
 
   &__teaser {
     font-family: $font-family;
-    font-style: normal;
     font-weight: $font-weight-normal;
     font-size: 16px;
     line-height: 150%;
@@ -29,6 +27,7 @@
     color: $diesel-dark;
 
     &__link {
+      text-decoration: underline;
       cursor: pointer;
       color: $green-darker;
     }
