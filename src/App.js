@@ -220,7 +220,7 @@ function App () {
           <div className="col-3"></div>
           <div className="col-6">
             <h3>3 måneder gratis</h3>
-            <Field label="Firmanavn (Fylles ut automatisk)" />
+            <Field label="Firmanavn" />
             <Field label="Organisasjonsnummer" />
             <Field label="Kontaktperson" />
             <Field label="Telefonnummer" type="phone" />
@@ -247,7 +247,7 @@ function App () {
             <p>Tilgang til historiske kilder, rundskriv, rettsavgjørelser, uttalelser og vedtak.</p>
             <p>Enten dine ansatte jobber som jurist, HR, HMS, eller har andre oppgaver der dere jobber med regelverket, vil dere alltid være oppdatert.</p>
             <p>Vil du vite mer om Lovdata Pro</p>
-            <Button primary>Klikk her</Button>
+            <Button primary href="https://lovdata.no/tjenester/pro/">Klikk her</Button>
           </div>
         </div>
       </FooterSection>

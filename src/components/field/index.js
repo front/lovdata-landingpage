@@ -2,7 +2,7 @@ import React from 'react';
 
 import './style.scss';
 
-function Field({ type, label }) {
+function Field({ type = 'text', label }) {
   const classes = `field`;
 
   return (

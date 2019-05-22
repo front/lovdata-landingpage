@@ -16,7 +16,6 @@
   color: white;
 
   @include for-phone-only {
-    text-align: center;
     background-size: cover;
     padding-top: $grid-gap * 2;
   }
@@ -30,6 +29,10 @@
 
     margin: 0;
     margin-bottom: $grid-gap;
+
+    @include for-phone-only {
+      text-align: center;
+    }
   }
 
   p {
@@ -43,12 +46,17 @@
       font-size: 18px;
     }
 
+    @include for-phone-only {
+      text-align: center;
+    }
+
     margin: 0;
     margin-bottom: $grid-gap / 2;
   }
 
   .btn {
     min-width: 190px;
+    box-sizing: border-box;
   }
 
   footer {
