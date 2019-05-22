@@ -27,9 +27,15 @@
     color: $diesel-dark;
 
     &__link {
-      text-decoration: underline;
       cursor: pointer;
-      color: $green-darker;
+      color: $green-dark;
+      border-bottom: 1px solid currentColor;
+      transition: border-bottom 0.3s;
+
+      &:hover {
+        border-bottom: 1px solid transparent;
+        color: $green;
+      }
     }
   }
 

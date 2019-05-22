@@ -5,9 +5,9 @@
   align-items: flex-end;
 
   padding: 0 0 $grid-gap 0;
-  min-height: 501px;
+  min-height: 560px;
 
-  background-image: url('./background.png');
+  background-image: url('./background.svg');
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: auto;
@@ -38,15 +38,14 @@
 
   .btn {
     min-width: 190px;
-    margin-left: $grid-gap / 2;
   }
 
   footer {
-    font-family: $font-family;
-    font-style: normal;
+    font-family: $font-family-secondary;
     font-weight: $font-weight-normal;
     font-size: 14px;
     line-height: 21px;
+    text-align: right;
     margin-top: $grid-gap;
   }
 }

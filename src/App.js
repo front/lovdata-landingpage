@@ -79,7 +79,7 @@ function App () {
                 <ListItem>Inntil 6 personlige brukerlisenser inkludert. </ListItem>
               </List>
               <div>
-                <Button primary>Få 3 måneder gratis</Button>
+                <Button primary onClick={ handleScrollToForm }>Få 3 måneder gratis</Button>
               </div>
             </div>
           </div>
@@ -246,7 +246,8 @@ function App () {
             <p>Lovdata Pro gjør det enklerer for bedrifter å holde seg oppdatert  på endringer i relevant regelverk. Lovdata Pro er et juridisk verktøy som holder dere i bedriften oppdatert på rettsområder og samtidig gir gode søkemuligheter til det relevante dokumentet.</p>
             <p>Tilgang til historiske kilder, rundskriv, rettsavgjørelser, uttalelser og vedtak.</p>
             <p>Enten dine ansatte jobber som jurist, HR, HMS, eller har andre oppgaver der dere jobber med regelverket, vil dere alltid være oppdatert.</p>
-            <p>Vil du vite mer om Lovdata Pro <Button>Klikk her</Button></p>
+            <p>Vil du vite mer om Lovdata Pro</p>
+            <Button primary>Klikk her</Button>
           </div>
         </div>
       </FooterSection>
