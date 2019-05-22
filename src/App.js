@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 
 import {
   HeaderSection,
@@ -14,6 +14,7 @@ import {
   Field,
   List,
   ListItem,
+  Spinner,
   Table,
   TableCell,
   TableFooter,
@@ -27,8 +28,59 @@ import check from './img/icon-check.svg';
 function App () {
   let formRef = React.createRef();
 
+  const [submitting, setSubmitting ] = useState(false);
+  const [isSubmitted, setIsSubmitted ] = useState(false);
+  const [formMsg, setFormMsg ] = useState('');
+
   function handleScrollToForm() {
     formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  function handleSubmitForm(event) {
+    event.preventDefault();
+
+    const data = {
+      name: event.target.name.value,
+      org: event.target.org.value,
+      contact: event.target.contact.value,
+      phone: event.target.phone.value,
+      email: event.target.email.value,
+    };
+
+    const {
+      REACT_APP_EMAILJS_RECEIVER: receiverEmail,
+      REACT_APP_EMAILJS_TEMPLATEID: template
+    } = process.env;
+
+    sendFeedback(template, event.target.email.value, receiverEmail, data);
+  }
+
+  function sendFeedback(templateId, senderEmail, receiverEmail, content) {
+    setSubmitting(true);
+
+    window.emailjs.send(
+      'sendgrid',
+      templateId,
+      {
+        senderEmail,
+        receiverEmail,
+        ...content
+      })
+      .then(res => {
+        console.log('Form sent!');
+
+        setSubmitting(false);
+        setIsSubmitted(true);
+        setFormMsg('Form sent!');
+      })
+      // Handle errors here however you like, or use a React error boundary
+      .catch(err => {
+        console.error('Failed to send form. Error: ', err);
+
+        setSubmitting(false);
+        setIsSubmitted(true);
+        setFormMsg('Failed to send form.');
+      });
   }
 
   return (
@@ -215,17 +267,23 @@ function App () {
         </div>
       </section>
 
-      <FormSection refProp={formRef}>
+      <FormSection refProp={formRef} onSubmitProp={ handleSubmitForm }>
         <div className="row">
           <div className="col-3"></div>
           <div className="col-6">
             <h3>3 måneder gratis</h3>
-            <Field label="Firmanavn" />
-            <Field label="Organisasjonsnummer" />
-            <Field label="Kontaktperson" />
-            <Field label="Telefonnummer" type="phone" />
-            <Field label="E-postadresse" type="email" />
-            <Button primary>Få 3 måneder gratis</Button>
+            <Field name="name" label="Firmanavn" />
+            <Field name="org" label="Organisasjonsnummer" />
+            <Field name="contact" label="Kontaktperson" />
+            <Field name="phone" label="Telefonnummer" type="phone" />
+            <Field name="email" abel="E-postadresse" type="email" />
+
+            { (!submitting && !isSubmitted ) && <div>
+              <Button primary type="submit">Få 3 måneder gratis</Button>
+              </div>
+            }
+            { isSubmitted && <div>{ formMsg }</div>}
+            { submitting && <Spinner /> }
           </div>
         </div>
       </FormSection>

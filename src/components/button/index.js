@@ -2,7 +2,7 @@ import React from 'react';
 
 import './style.scss';
 
-function Button({ className, children, primary, href, onClick }) {
+function Button({ className, children, primary, href, onClick, type = 'button' }) {
   let classes = [`btn`];
 
   if (primary) {
@@ -27,7 +27,7 @@ function Button({ className, children, primary, href, onClick }) {
     return (
       <button
         className={classes}
-        type="button"
+        type={ type }
         onClick={onClick}
       >
         {children}
