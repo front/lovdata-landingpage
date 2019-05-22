@@ -5,6 +5,7 @@ export { default as Field } from './field';
 export { default as Icon } from './icon';
 export { default as List } from './list';
 export { default as ListItem } from './list/list-item';
+export { default as Spinner } from './spinner';
 export { default as Table } from './table';
 export { default as TableCell } from './table/table-cell';
 export { default as TableFooter } from './table/table-footer';

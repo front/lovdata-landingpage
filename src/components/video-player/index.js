@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import { Spinner } from '../index';
+
 import './style.scss';
 
 class VideoPlayer extends Component {
@@ -16,27 +18,23 @@ class VideoPlayer extends Component {
    }
 
   playVideo() {
-    console.log('playVideo');
-
     this.setState({
       paused: !this.state.paused,
-
     });
   }
 
   render() {
-    console.log('render');
     const classes = 'video-player';
-    const videoSrc = `${this.props.src}${ this.state.paused ? `` : `&autoplay=1`}`;
+    const { paused } = this.state;
+
+    const videoFrame = paused ? <div className="video-player__placeholder"></div> : <iframe className="video-player__iframe" title="iframe" src={ this.props.src }
+  ></iframe>
 
     return (
       <div className={ classes } onClick={ this.playVideo }>
-        <div className="video-player__button"></div>
-        <iframe
-          className="video-player__iframe"
-          title="iframe"
-          src={ videoSrc }
-        ></iframe>
+        <Spinner />
+        <div className={ `video-player__button${ paused ? `` : ` video-player__button--hide`  }`}></div>
+        { videoFrame }
       </div>
     );
   }
@@ -47,7 +45,7 @@ VideoPlayer.propTypes = {
 };
 
 VideoPlayer.defaultProps = {
-  src: 'https://player.vimeo.com/video/264438288?title=0&byline=0&controls=0&sidedock=0',
+  src: 'https://player.vimeo.com/video/264438288?title=0&byline=0&controls=0&sidedock=0&autoplay=1',
 };
 
 export default VideoPlayer;

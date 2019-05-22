@@ -2,6 +2,7 @@
 
 .comment {
   text-align: center;
+  padding: $grid-gap / 2;
 
   &__body {
     font-family: $font-family;

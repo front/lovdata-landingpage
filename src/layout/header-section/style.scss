@@ -17,9 +17,23 @@
 
   header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2 * $grid-gap;
+    justify-content: center;
+
+    margin-bottom: $grid-gap;
+
+    .btn {
+      display: none;
+
+      @include for-tablet-portrait-up {
+        display: block;
+      }
+    }
+
+    @include for-tablet-portrait-up {
+      justify-content: space-between;
+    }
 
     @include for-tablet-landscape-up {
       margin-bottom: 3 * $grid-gap;
