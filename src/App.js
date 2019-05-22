@@ -112,8 +112,8 @@ function App () {
           <Table>
             <TableRow body={false}>
               <TableHeader></TableHeader>
-              <TableHeader bordered>Lovdata Pro</TableHeader>
               <TableHeader bordered>Lovdata.no</TableHeader>
+              <TableHeader bordered>Lovdata Pro</TableHeader>
             </TableRow>
 
             <TableRow>
@@ -148,61 +148,61 @@ function App () {
 
             <TableRow>
               <TableCell>Merknader og markeringer</TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
+              <TableCell bordered></TableCell>
               <TableCell bordered><img src={check} alt="check" /></TableCell>
             </TableRow>
 
             <TableRow>
               <TableCell>Dele med kolleger</TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
+              <TableCell bordered></TableCell>
               <TableCell bordered><img src={check} alt="check" /></TableCell>
             </TableRow>
 
             <TableRow>
               <TableCell>Grupperinger</TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
+              <TableCell bordered></TableCell>
               <TableCell bordered><img src={check} alt="check" /></TableCell>
             </TableRow>
 
             <TableRow>
               <TableCell>Dine egne utdrag</TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
+              <TableCell bordered></TableCell>
               <TableCell bordered><img src={check} alt="check" /></TableCell>
             </TableRow>
 
             <TableRow>
               <TableCell>Historiske versjoner av gjeldende forskrifter</TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
+              <TableCell bordered></TableCell>
               <TableCell bordered><img src={check} alt="check" /></TableCell>
             </TableRow>
 
             <TableRow>
               <TableCell>Rettsavgjørelser</TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
+              <TableCell bordered></TableCell>
               <TableCell bordered><img src={check} alt="check" /></TableCell>
             </TableRow>
 
             <TableRow>
               <TableCell>Publikasjoner og uttalelser</TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
+              <TableCell bordered></TableCell>
               <TableCell bordered><img src={check} alt="check" /></TableCell>
             </TableRow>
 
             <TableRow>
               <TableCell>Forarbeider og stortingsdokumenter</TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
+              <TableCell bordered></TableCell>
               <TableCell bordered><img src={check} alt="check" /></TableCell>
             </TableRow>
 
             <TableRow>
               <TableCell>Nemder og utvalg</TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
+              <TableCell bordered></TableCell>
               <TableCell bordered><img src={check} alt="check" /></TableCell>
             </TableRow>
 
             <TableRow>
               <TableCell>Traktater & EU-domstolen</TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
+              <TableCell bordered></TableCell>
               <TableCell bordered><img src={check} alt="check" /></TableCell>
             </TableRow>
 
