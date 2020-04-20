@@ -1,9 +1,8 @@
 @import "../../scss/common";
 
 .form-section {
-  padding: 2 * $grid-gap 0;
-  min-height: 675px;
-
+  min-height: 673px;
+  padding-top: $grid-gap * 2 / 3;
   background-image: url('./background.svg');
   background-repeat: no-repeat;
   background-position: top center;
@@ -13,7 +12,10 @@
   color: white;
 
   @include for-tablet-landscape-up {
-    padding: 3 * $grid-gap 0;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 2px);
+    padding: 0;
   }
 
   .spinner {
@@ -30,7 +32,12 @@
     line-height: 43px;
 
     margin: 0;
-    margin-bottom: $grid-gap * 2;
+    margin-bottom: $grid-gap;
+
+
+    @include for-tablet-landscape-up {
+      margin-bottom: $grid-gap * 2;
+    }
   }
 
   .btn {

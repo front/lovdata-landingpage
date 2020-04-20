@@ -2,15 +2,19 @@
 
 .header-section {
   padding: $grid-gap 0;
-  min-height: 600px;
+  min-height: 597px;
 
   background-image: url('./background.svg');
+  background-image: url('./background.svg'), linear-gradient(to bottom, $milano-red 50%, white 50%);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: auto;
-  background-color: $milano-red;
 
   color: white;
+
+  @include for-tablet-landscape-up {
+    background: url('./background.svg'), linear-gradient(to right, $milano-red 50%, white 50%);
+  }
 
   header {
     display: flex;
@@ -61,5 +65,9 @@
 
     margin: 0px;
     margin-bottom: $grid-gap / 2;
+
+    @include for-phone-only {
+      font-size: 16px;
+    }
   }
 }
