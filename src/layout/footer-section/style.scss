@@ -20,6 +20,10 @@
     padding-top: $grid-gap * 2;
   }
 
+  @include for-phone-only {
+    text-align: center;
+  }
+
   h2 {
     width: 100%;
     font-family: $font-family;
@@ -29,10 +33,6 @@
 
     margin: 0;
     margin-bottom: $grid-gap;
-
-    @include for-phone-only {
-      text-align: center;
-    }
   }
 
   p {
@@ -44,10 +44,6 @@
 
     @include for-tablet-landscape-up {
       font-size: 18px;
-    }
-
-    @include for-phone-only {
-      text-align: center;
     }
 
     margin: 0;
