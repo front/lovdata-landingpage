@@ -275,8 +275,8 @@ function App () {
             <Field name="name" label="Firmanavn" />
             <Field name="org" label="Organisasjonsnummer" />
             <Field name="contact" label="Kontaktperson" />
-            <Field name="phone" label="Telefonnummer" type="phone" />
-            <Field name="email" abel="E-postadresse" type="email" />
+            <Field name="phone" label="Telefonnummer" type="phone" className="field--half" />
+            <Field name="email" label="E-postadresse" type="email" className="field--half" />
 
             { (!submitting && !isSubmitted ) && <div>
               <Button primary type="submit">Få 3 måneder gratis</Button>

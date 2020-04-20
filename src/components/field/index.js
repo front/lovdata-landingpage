@@ -2,19 +2,23 @@ import React from 'react';
 
 import './style.scss';
 
-function Field({ type = 'text', label, name, required =  true }) {
-  const classes = `field`;
+function Field({ type = 'text', label, name, required =  true, className }) {
+  let classes = `field`;
 
-  return (
+  if ( className ) {
+    classes = `${classes} ${className}`;
+  }
+
+  return <div className={ classes }>
+    <label className={ `field__label` } htmlFor={ name }>{ label }</label>
     <input
       id={ name }
-      className={ classes }
       name={ name }
+      className={ `field__input` }
       type={ type }
-      placeholder={ label }
       required={ required }
     />
-  );
+  </div>;
 }
 
 export default Field;
