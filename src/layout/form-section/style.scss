@@ -1,8 +1,11 @@
 @import "../../scss/common";
 
 .form-section {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 2px);
   min-height: 673px;
-  padding-top: $grid-gap * 2 / 3;
+
   background-image: url('./background.svg');
   background-repeat: no-repeat;
   background-position: top center;
@@ -11,11 +14,8 @@
 
   color: white;
 
-  @include for-tablet-landscape-up {
-    display: flex;
-    align-items: center;
-    width: calc(100% - 2px);
-    padding: 0;
+  .container {
+    flex-grow: 1;
   }
 
   .spinner {
