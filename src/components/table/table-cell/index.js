@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 function TableCell({ children, bordered }) {
-  const classes = `table-cell${bordered ? ' table-cell--bordered' : ''}`;
+  const classes = `table-cell${ bordered ? ' table-cell--bordered' : '' }`;
 
   return (
-    <div className={classes}>{children}</div>
+    <div role="cell" className={ classes }>{ children }</div>
   );
 }
 

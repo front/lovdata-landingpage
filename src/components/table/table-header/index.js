@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 function TableHeader({ children, bordered }) {
-  const classes = `table-header${bordered ? ' table-header--bordered' : ''}`;
+  const classes = `table-header${ bordered ? ' table-header--bordered' : '' }`;
 
   return (
-    <div className={classes}>{children}</div>
+    <div role="columnheader" className={ classes }>{ children }</div>
   );
 }
 

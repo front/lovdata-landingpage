@@ -85,13 +85,14 @@ function App () {
 
   return (
     <Fragment>
+      <a href="#content" className="hidden">Skip to content</a>
       <HeaderSection onClickButton={ handleScrollToForm }>
         <div className="row">
           <div className="col-6">
-            <h1>Ditt viktigste juridiske arbeidsverktøy</h1>
-            <p>Er din bedrift og ansatte fullstendig oppdatert på lover og regelverk innenfor fagfeltet dere jobber? </p>
-            <p>Med Lovdata Pro får du varslinger på endringer og oppdateringer i lovverket. Få varslinger på epost i rettsområdet som interesserer din bedrift</p>
-            <p>Alt på ett sted- ryddig, relevant og digitalt!</p>
+            <h1 tabIndex="0">Ditt viktigste juridiske arbeidsverktøy</h1>
+            <p tabIndex="0">Er din bedrift og ansatte fullstendig oppdatert på lover og regelverk innenfor fagfeltet dere jobber?</p>
+            <p tabIndex="0">Med Lovdata Pro får du varslinger på endringer og oppdateringer i lovverket. Få varslinger på epost i rettsområdet som interesserer din bedrift</p>
+            <p tabIndex="0">Alt på ett sted- ryddig, relevant og digitalt!</p>
           </div>
 
           <div className="col-6">
@@ -100,9 +101,9 @@ function App () {
         </div>
       </HeaderSection>
 
-      <section className="cards-section">
+      <section id="content" className="cards-section">
         <div className="container">
-          <h2>Lovdata Pro- fordeler</h2>
+          <h2 tabIndex="0">Lovdata Pro- fordeler</h2>
           <div className="row">
             <div className="col-7">
               <div className="row">
@@ -142,7 +143,7 @@ function App () {
         <div className="row">
           <div className="col-3"></div>
           <div className="col-6">
-            <h2>Kampanjetilbud</h2>
+            <h2 tabIndex="0">Kampanjetilbud</h2>
             <Card
               featured
               icon="calendar"
@@ -150,6 +151,8 @@ function App () {
               teaser={ [
                 'Få 3 måneder gratis med å ',
                 <span
+                  tabIndex="0"
+                  role="button"
                   key="card-teaser-link"
                   className="card__teaser__link"
                   onClick={ handleScrollToForm }>bestille nå</span>
@@ -271,7 +274,7 @@ function App () {
         <div className="row">
           <div className="col-3"></div>
           <div className="col-6">
-            <h3>3 måneder gratis</h3>
+            <h3 tabIndex="0">3 måneder gratis</h3>
             <Field name="name" label="Firmanavn" />
             <Field name="org" label="Organisasjonsnummer" />
             <Field name="contact" label="Kontaktperson" />
@@ -300,11 +303,11 @@ function App () {
       <FooterSection>
         <div className="row">
           <div className="col-10">
-            <h2>Dette er Lovdata Pro</h2>
-            <p>Lovdata Pro gjør det enklerer for bedrifter å holde seg oppdatert  på endringer i relevant regelverk. Lovdata Pro er et juridisk verktøy som holder dere i bedriften oppdatert på rettsområder og samtidig gir gode søkemuligheter til det relevante dokumentet.</p>
-            <p>Tilgang til historiske kilder, rundskriv, rettsavgjørelser, uttalelser og vedtak.</p>
-            <p>Enten dine ansatte jobber som jurist, HR, HMS, eller har andre oppgaver der dere jobber med regelverket, vil dere alltid være oppdatert.</p>
-            <p>Vil du vite mer om Lovdata Pro</p>
+            <h2 tabIndex="0">Dette er Lovdata Pro</h2>
+            <p tabIndex="0">Lovdata Pro gjør det enklerer for bedrifter å holde seg oppdatert  på endringer i relevant regelverk. Lovdata Pro er et juridisk verktøy som holder dere i bedriften oppdatert på rettsområder og samtidig gir gode søkemuligheter til det relevante dokumentet.</p>
+            <p tabIndex="0">Tilgang til historiske kilder, rundskriv, rettsavgjørelser, uttalelser og vedtak.</p>
+            <p tabIndex="0">Enten dine ansatte jobber som jurist, HR, HMS, eller har andre oppgaver der dere jobber med regelverket, vil dere alltid være oppdatert.</p>
+            <p tabIndex="0">Vil du vite mer om Lovdata Pro</p>
             <Button primary href="https://lovdata.no/tjenester/pro/">Klikk her</Button>
           </div>
         </div>

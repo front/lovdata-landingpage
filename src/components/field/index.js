@@ -2,7 +2,7 @@ import React from 'react';
 
 import './style.scss';
 
-function Field({ type = 'text', label, name, required =  true, className }) {
+function Field({ type = 'text', label, name, required = true, className }) {
   let classes = `field`;
 
   if ( className ) {
@@ -17,6 +17,8 @@ function Field({ type = 'text', label, name, required =  true, className }) {
       className={ `field__input` }
       type={ type }
       required={ required }
+      aria-required={ required }
+      aria-label={ label }
     />
   </div>;
 }

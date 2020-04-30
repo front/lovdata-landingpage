@@ -15,12 +15,20 @@ class VideoPlayer extends Component {
     };
 
     this.playVideo = this.playVideo.bind(this);
+    this.keyUp = this.keyUp.bind(this);
    }
 
   playVideo() {
     this.setState({
       paused: !this.state.paused,
     });
+  }
+
+  keyUp(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      this.playVideo();
+    }
   }
 
   render() {
@@ -31,7 +39,7 @@ class VideoPlayer extends Component {
   ></iframe>
 
     return (
-      <div className={ classes } onClick={ this.playVideo }>
+      <div role="button" tabIndex="0" aria-disabled={ !paused } className={ classes } onKeyUp={ this.keyUp } onClick={ this.playVideo }>
         <Spinner />
         <div className={ `video-player__button${ paused ? `` : ` video-player__button--hide`  }`}></div>
         { videoFrame }

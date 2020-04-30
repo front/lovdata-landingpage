@@ -11,7 +11,7 @@ function HeaderSection({ children, onClickButton } ) {
     <section className="header-section">
       <div className="container">
         <header>
-          <img src={ logo } alt="Lovdata Pro" />
+          <img src={ logo } alt="Lovdata Pro" tabIndex="0" aria-label="LovData Pro" />
           <Button primary onClick={ onClickButton }>Få 3 måneder gratis</Button>
         </header>
 

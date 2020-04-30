@@ -6,7 +6,7 @@ function Table({ children }) {
   const classes = `table`;
 
   return (
-    <div className={classes}>{children}</div>
+    <div role="table" tabIndex="0" className={ classes }>{ children }</div>
   );
 }
 

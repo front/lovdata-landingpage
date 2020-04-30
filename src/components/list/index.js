@@ -6,8 +6,8 @@ function List({ children, title }) {
   const classes = `list`;
 
   return (
-    <div className={classes}>
-      <h4 className="list__title">{title}</h4>
+    <div tabIndex="0" aria-label={ title } className={ classes }>
+      <h4 className="list__title">{ title }</h4>
       <ul>
         {children}
       </ul>

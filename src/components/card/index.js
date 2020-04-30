@@ -4,7 +4,7 @@ import Icon from '../icon';
 
 import './style.scss';
 
-function Card({className, children, featured, icon, title, teaser}) {
+function Card({ className, children, featured, icon, title, teaser }) {
   let classes = [`card`];
 
   if (featured) {
@@ -18,10 +18,10 @@ function Card({className, children, featured, icon, title, teaser}) {
   classes = classes.join(' ');
 
   return (
-    <div className={classes}>
-      <Icon type={icon} />
-      <h3 key="card-title" className="card__title">{title}</h3>
-      <p key="card-teaser" className="card__teaser">{teaser}</p>
+    <div tabIndex="0" aria-label={ title } className={ classes }>
+      <Icon type={ icon } />
+      <h3 key="card-title" className="card__title">{ title }</h3>
+      <p key="card-teaser" className="card__teaser">{ teaser }</p>
       {children}
     </div>
   );
