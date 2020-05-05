@@ -1,18 +1,16 @@
 import React from 'react';
-import { Button } from '../../components';
 
 import './style.scss';
 
-import logo from '../../img/logo.svg';
+import logo from '../../img/logo_pro.png';
 
-function HeaderSection({ children, onClickButton } ) {
+function HeaderSection({ children } ) {
 
   return (
     <section className="header-section">
       <div className="container">
         <header>
-          <img src={ logo } alt="Lovdata Pro" tabIndex="0" aria-label="LovData Pro" />
-          <Button primary onClick={ onClickButton }>Få 6 måneder gratis</Button>
+          <a href="mailto:"><img src={ logo } alt="Lovdata Pro" tabIndex="0" aria-label="LovData Pro" /></a>
         </header>
 
         { children }

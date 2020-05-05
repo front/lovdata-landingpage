@@ -3,7 +3,6 @@ import React, { Fragment, useState } from 'react';
 import {
   HeaderSection,
   FooterSection,
-  FormSection,
   TeaserSection,
 } from './layout';
 
@@ -20,7 +19,6 @@ import {
   TableFooter,
   TableHeader,
   TableRow,
-  VideoPlayer,
 } from './components';
 
 import check from './img/icon-check.svg';
@@ -85,23 +83,37 @@ function App () {
 
   return (
     <Fragment>
-      <a href="#content" className="hidden">Skip to content</a>
+      <a href="#main" className="hidden">Skip to content</a>
       <HeaderSection onClickButton={ handleScrollToForm }>
         <div className="row">
           <div className="col-6">
-            <h1 tabIndex="0">Ditt viktigste juridiske arbeidsverktø</h1>
+            <h1 tabIndex="0">Ditt viktigste juridiske arbeidsverktøy</h1>
             <p tabIndex="0">Lovdata tilbyr et gunstig abonnement for kommunens ansatte.</p>
             <p tabIndex="0">Abonnementsprisen faktureres på grunnlag av innbyggertallet i kommunen.</p>
             <p tabIndex="0">Alle ansatte med personlig e-postadresse med kommunenes domene kan benytte seg av avtalen.</p>
           </div>
 
           <div className="col-6">
-            <VideoPlayer />
+            <form onSubmit={ handleSubmitForm }>
+              <h3 tabIndex="0">Få 6 måneder gratis</h3>
+              <Field name="name" label="Kommunenavn" />
+              <Field name="org" label="Organisasjonsnummer" />
+              <Field name="contact" label="Kontaktperson" />
+              <Field name="phone" label="Telefonnummer" type="phone" className="field--half" />
+              <Field name="email" label="E-postadresse" type="email" className="field--half" />
+
+              { (!submitting && !isSubmitted ) && <div>
+                <Button primary type="submit">Få 6 måneder gratis</Button>
+                </div>
+              }
+              { isSubmitted && <div>{ formMsg }</div>}
+              { submitting && <Spinner /> }
+            </form>
           </div>
         </div>
       </HeaderSection>
 
-      <section id="content" className="cards-section">
+      <section id="main" className="cards-section">
         <div className="container">
           <h2 tabIndex="0">Lovdata Pro- fordeler</h2>
           <div className="row">
@@ -269,27 +281,6 @@ function App () {
           </Table>
         </div>
       </section>
-
-      <FormSection refProp={formRef} onSubmitProp={ handleSubmitForm }>
-        <div className="row">
-          <div className="col-3"></div>
-          <div className="col-6">
-            <h3 tabIndex="0">6 måneder gratis</h3>
-            <Field name="name" label="Firmanavn" />
-            <Field name="org" label="Organisasjonsnummer" />
-            <Field name="contact" label="Kontaktperson" />
-            <Field name="phone" label="Telefonnummer" type="phone" className="field--half" />
-            <Field name="email" label="E-postadresse" type="email" className="field--half" />
-
-            { (!submitting && !isSubmitted ) && <div>
-              <Button primary type="submit">Få 6 måneder gratis</Button>
-              </div>
-            }
-            { isSubmitted && <div>{ formMsg }</div>}
-            { submitting && <Spinner /> }
-          </div>
-        </div>
-      </FormSection>
 
       <section className="comments-section">
         <Comment
