@@ -9,19 +9,14 @@ import {
 import {
   Button,
   Card,
-  Comment,
   Field,
   List,
   ListItem,
   Spinner,
-  Table,
-  TableCell,
-  TableFooter,
-  TableHeader,
-  TableRow,
 } from './components';
 
-import check from './img/icon-check.svg';
+import iconEmail from './img/icon-email.png';
+import iconPhone from './img/icon-phone.png';
 
 function App () {
   let formRef = React.createRef();
@@ -94,7 +89,7 @@ function App () {
           </div>
 
           <div className="col-6">
-            <form onSubmit={ handleSubmitForm }>
+            <form ref={formRef} onSubmit={ handleSubmitForm }>
               <h3 tabIndex="0">Få 6 måneder gratis</h3>
               <Field name="name" label="Kommunenavn" />
               <Field name="org" label="Organisasjonsnummer" />
@@ -136,16 +131,13 @@ function App () {
             <div className="col-5">
               <List title="Med Lovdata Pro får alle ansatte i kommunene tilgang til:">
                 <ListItem>Varslinger i epost på det rettsområdet som interesserer deg</ListItem>
-                <ListItem>Personlige verktøy. Grupperinger, merknader, utdrag, markeringer, huske-funksjon</ListItem>
+                <ListItem>Personlige verktøy. Grupperinger, merknader, utdrag, markeringer, huske-funksjon.</ListItem>
                 <ListItem>Dele dokumenter med kolleger og andre Lovdata Pro brukere</ListItem>
                 <ListItem>Tilgang på rettsavgjørelser – mange titalls tusen dommer, mange år tilbake i tid</ListItem>
                 <ListItem>Gode søkemuligheter i lovverket med historiske versjoner</ListItem>
                 <ListItem>Oppdaterte kilder, rundskriv, forskrifter, vedtak, juridisk litteratur m.m.</ListItem>
-                <ListItem>Ubegrenset brukerlisenser for kommunen</ListItem>
+                <ListItem>Ubegrenset brukerlisenser for kommunen.</ListItem>
               </List>
-              <div>
-                <Button primary onClick={ handleScrollToForm }>Få 6 måneder gratis</Button>
-              </div>
             </div>
           </div>
         </div>
@@ -174,121 +166,66 @@ function App () {
         </div>
       </TeaserSection>
 
-      <section className="table-section">
+      <section className="prices-section">
         <div className="container">
-          <Table>
-            <TableRow body={false}>
-              <TableHeader></TableHeader>
-              <TableHeader bordered>Lovdata.no</TableHeader>
-              <TableHeader bordered>Lovdata Pro</TableHeader>
-            </TableRow>
+          <table border="0">
+            <thead>
+              <tr>
+                <td>Pristrinn</td>
+                <td>Pris</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pristrinn 10 (fra 1 til 20.000 innbyggere)</td>
+                <td>kr 17 900</td>
+              </tr>
+              <tr>
+                <td>Pristrinn 20 (fra 20.001 til 40.000 innbyggere)</td>
+                <td>kr 29 900</td>
+              </tr>
+              <tr>
+                <td>Pristrinn 30 (fra 40.001 til 60.000 innbyggere)</td>
+                <td>kr 39 900</td>
+              </tr>
+              <tr>
+                <td>Pristrinn 40 (fra 60.001 til 80.000 innbyggere)</td>
+                <td>kr 49 900</td>
+              </tr>
+              <tr>
+                <td>Over 80.000 innbyggere</td>
+                <td>Egen avtale</td>
+              </tr>
+            </tbody>
+          </table>
 
-            <TableRow>
-              <TableCell>Norges lover</TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>Sentral forskrifter</TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>Lokale forskrifter</TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>Statens personalhåndbok</TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>Kunngjøringer i Norsk Lovtidend</TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>Merknader og markeringer</TableCell>
-              <TableCell bordered></TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>Dele med kolleger</TableCell>
-              <TableCell bordered></TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>Grupperinger</TableCell>
-              <TableCell bordered></TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>Dine egne utdrag</TableCell>
-              <TableCell bordered></TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>Historiske versjoner av gjeldende forskrifter</TableCell>
-              <TableCell bordered></TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>Rettsavgjørelser</TableCell>
-              <TableCell bordered></TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>Publikasjoner og uttalelser</TableCell>
-              <TableCell bordered></TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>Forarbeider og stortingsdokumenter</TableCell>
-              <TableCell bordered></TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>Nemder og utvalg</TableCell>
-              <TableCell bordered></TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>Traktater & EU-domstolen</TableCell>
-              <TableCell bordered></TableCell>
-              <TableCell bordered><img src={check} alt="check" /></TableCell>
-            </TableRow>
-
-            <TableRow  body={false}>
-              <TableFooter></TableFooter>
-              <TableFooter bordered></TableFooter>
-              <TableFooter bordered></TableFooter>
-            </TableRow>
-          </Table>
+          <p>Alle kommunens ansatte med personlig e-postadresse på kommunens domene kan benytte seg av avtalen. Kunden faktureres på grunnlag av innbyggertallet i kommunen. Kommuneabonnement gjelder ikke for kommunale foretak som er skilt ut som egne enheter eller selskaper. Dette gjelder blant annet parkeringsselskap, biblioteker, interkommunale selskaper mm. Lovdata avgjør i tvilstilfeller om en enhet kan inkluderes i abonnementet.</p>
         </div>
       </section>
 
-      <section className="comments-section">
-        <Comment
-          author="Maria Sivertsen"
-          authorImg="Maria Sivertsen"
-          company="Elektroskandia Norge AS"
-          date="16.05.2019"
-        >“Lovdata Pro hjelper oss med å holde vår bedrift oppdatert på endringer i Lovverket. <br />Som Compliance Manager er det viktig å kunne få varslinger på regelverk innenfor vår industri og arbeidsmiljø”.</Comment>
+      <section className="support-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-6">
+              <address>
+                <a href="mailto:marked@lovdata.no">
+                  <img src={ iconPhone } alt="Tel: 23 11 83 00" />
+                  <h2>23 11 83 00</h2>
+                  <p>Snakk med en av våre konsulenter. Åpningstiden er fra 0800 - 1600.</p>
+                </a>
+              </address>
+            </div>
+            <div className="col-6">
+              <address>
+                <a href="mailto:marked@lovdata.no">
+                  <img src={ iconEmail } alt="Mail: marked@lovdata.no" />
+                  <h2>marked@lovdata.no</h2>
+                  <p>Send oss en e-post med det du lurer på. Tips: send med telefonnummeret ditt, så kan vi ringe deg opp igjen.</p>
+                </a>
+              </address>
+            </div>
+          </div>
+        </div>
       </section>
 
       <FooterSection>

@@ -61,10 +61,58 @@ section {
   }
 }
 
-.table-section {
+.prices-section {
   padding: 3 * $grid-gap 0;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      td {
+        width: 50%;
+        padding: $grid-gap;
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+
+    tbody {
+      tr {
+        background-color: #fafafa;
+
+        &:nth-last-of-type(2n - 1) {
+          background: #ffe4e1;
+        }
+
+        td {
+          padding: $grid-gap / 2 $grid-gap;
+        }
+      }
+    }
+  }
+
+  p {
+    padding: $grid-gap 0;
+    color: $text-color-secondary;
+  }
 }
 
-.comments-section {
-  padding: 3 * $grid-gap 0 2 * $grid-gap 0;
+.support-section {
+  padding-bottom: 3 * $grid-gap;
+  address {
+    font-style: normal;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    p {
+      color: $text-color-secondary;
+      line-height: 26px;
+    }
+  }
 }

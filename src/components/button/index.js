@@ -17,19 +17,11 @@ function Button({ className, children, primary, href, onClick, type = 'button' }
 
   if (href) {
     return (
-      <a
-        className={classes}
-        href={href}>
-        {children}
-      </a>
+      <a className={classes} href={href}>{children}</a>
     );
   } else {
     return (
-      <button
-        className={classes}
-        type={ type }
-        onClick={onClick}
-      >
+      <button className={classes} type={ type } onClick={onClick}>
         {children}
       </button>
     );
