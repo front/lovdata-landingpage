@@ -15,9 +15,9 @@ storiesOf('Basics|Card', module)
     <Card
       featured
       icon="calendar"
-      title="Få 3 måneder gratis"
+      title="Få 6 måneder gratis"
       teaser={ [
-        'Få 3 måneder gratis med å ',
+        'Få 6 måneder gratis med å ',
         <span
           key="card-teaser-link"
           className="card__teaser__link"

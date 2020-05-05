@@ -89,10 +89,10 @@ function App () {
       <HeaderSection onClickButton={ handleScrollToForm }>
         <div className="row">
           <div className="col-6">
-            <h1 tabIndex="0">Ditt viktigste juridiske arbeidsverktøy</h1>
-            <p tabIndex="0">Er din bedrift og ansatte fullstendig oppdatert på lover og regelverk innenfor fagfeltet dere jobber?</p>
-            <p tabIndex="0">Med Lovdata Pro får du varslinger på endringer og oppdateringer i lovverket. Få varslinger på epost i rettsområdet som interesserer din bedrift</p>
-            <p tabIndex="0">Alt på ett sted- ryddig, relevant og digitalt!</p>
+            <h1 tabIndex="0">Ditt viktigste juridiske arbeidsverktø</h1>
+            <p tabIndex="0">Lovdata tilbyr et gunstig abonnement for kommunens ansatte.</p>
+            <p tabIndex="0">Abonnementsprisen faktureres på grunnlag av innbyggertallet i kommunen.</p>
+            <p tabIndex="0">Alle ansatte med personlig e-postadresse med kommunenes domene kan benytte seg av avtalen.</p>
           </div>
 
           <div className="col-6">
@@ -122,17 +122,17 @@ function App () {
               </div>
             </div>
             <div className="col-5">
-              <List title="Med Lovdata Pro får du:">
+              <List title="Med Lovdata Pro får alle ansatte i kommunene tilgang til:">
                 <ListItem>Varslinger i epost på det rettsområdet som interesserer deg</ListItem>
-                <ListItem>Personlige verktøy. Grupperinger, merknader, utdrag, markeringer, huske-funksjon.</ListItem>
+                <ListItem>Personlige verktøy. Grupperinger, merknader, utdrag, markeringer, huske-funksjon</ListItem>
                 <ListItem>Dele dokumenter med kolleger og andre Lovdata Pro brukere</ListItem>
                 <ListItem>Tilgang på rettsavgjørelser – mange titalls tusen dommer, mange år tilbake i tid</ListItem>
                 <ListItem>Gode søkemuligheter i lovverket med historiske versjoner</ListItem>
                 <ListItem>Oppdaterte kilder, rundskriv, forskrifter, vedtak, juridisk litteratur m.m.</ListItem>
-                <ListItem>Inntil 6 personlige brukerlisenser inkludert. </ListItem>
+                <ListItem>Ubegrenset brukerlisenser for kommunen</ListItem>
               </List>
               <div>
-                <Button primary onClick={ handleScrollToForm }>Få 3 måneder gratis</Button>
+                <Button primary onClick={ handleScrollToForm }>Få 6 måneder gratis</Button>
               </div>
             </div>
           </div>
@@ -147,9 +147,9 @@ function App () {
             <Card
               featured
               icon="calendar"
-              title="Få 3 måneder gratis"
+              title="Få 6 måneder gratis"
               teaser={ [
-                'Få 3 måneder gratis med å ',
+                'Få 6 måneder gratis med å ',
                 <span
                   tabIndex="0"
                   role="button"
@@ -274,7 +274,7 @@ function App () {
         <div className="row">
           <div className="col-3"></div>
           <div className="col-6">
-            <h3 tabIndex="0">3 måneder gratis</h3>
+            <h3 tabIndex="0">6 måneder gratis</h3>
             <Field name="name" label="Firmanavn" />
             <Field name="org" label="Organisasjonsnummer" />
             <Field name="contact" label="Kontaktperson" />
@@ -282,7 +282,7 @@ function App () {
             <Field name="email" label="E-postadresse" type="email" className="field--half" />
 
             { (!submitting && !isSubmitted ) && <div>
-              <Button primary type="submit">Få 3 måneder gratis</Button>
+              <Button primary type="submit">Få 6 måneder gratis</Button>
               </div>
             }
             { isSubmitted && <div>{ formMsg }</div>}

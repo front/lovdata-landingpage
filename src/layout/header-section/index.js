@@ -12,7 +12,7 @@ function HeaderSection({ children, onClickButton } ) {
       <div className="container">
         <header>
           <img src={ logo } alt="Lovdata Pro" tabIndex="0" aria-label="LovData Pro" />
-          <Button primary onClick={ onClickButton }>Få 3 måneder gratis</Button>
+          <Button primary onClick={ onClickButton }>Få 6 måneder gratis</Button>
         </header>
 
         { children }

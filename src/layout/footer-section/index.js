@@ -7,7 +7,7 @@ function FooterSection({ children} ) {
     <section className="footer-section">
       <div className="container">
         { children }
-        <footer>Lovdata Pro er en tjeneste fra Stiftelsen Lovdata — ©2019</footer>
+        <footer>Lovdata Pro er en tjeneste fra Stiftelsen Lovdata — ©2020</footer>
       </div>
     </section>
   );
