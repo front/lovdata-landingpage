@@ -93,7 +93,7 @@ function App () {
 
           <div className="col-6">
             <form ref={formRef} onSubmit={ handleSubmitForm }>
-              <h3 tabIndex="0">Få 6 måneder gratis</h3>
+              <h2 tabIndex="0">Få 6 måneder gratis</h2>
               <Field name="name" label="Kommunenavn" />
               <Field name="org" label="Organisasjonsnummer" />
               <Field name="contact" label="Kontaktperson" />
@@ -171,38 +171,6 @@ function App () {
 
       <section className="prices-section">
         <div className="container">
-          { /* <table border="0">
-            <thead>
-              <tr>
-                <td>Pristrinn</td>
-                <td>Pris</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Pristrinn 10 (fra 1 til 20.000 innbyggere)</td>
-                <td>kr 17 900</td>
-              </tr>
-              <tr>
-                <td>Pristrinn 20 (fra 20.001 til 40.000 innbyggere)</td>
-                <td>kr 29 900</td>
-              </tr>
-              <tr>
-                <td>Pristrinn 30 (fra 40.001 til 60.000 innbyggere)</td>
-                <td>kr 39 900</td>
-              </tr>
-              <tr>
-                <td>Pristrinn 40 (fra 60.001 til 80.000 innbyggere)</td>
-                <td>kr 49 900</td>
-              </tr>
-              <tr>
-                <td>Over 80.000 innbyggere</td>
-                <td>Egen avtale</td>
-              </tr>
-            </tbody>
-            </table> */ }
-
-
           <Table>
             <TableRow body={false}>
               <TableHeader bordered>Pristrinn</TableHeader>
@@ -234,7 +202,6 @@ function App () {
             </TableRow>
           </Table>
 
-
           <p>Alle kommunens ansatte med personlig e-postadresse på kommunens domene kan benytte seg av avtalen. Kunden faktureres på grunnlag av innbyggertallet i kommunen. Kommuneabonnement gjelder ikke for kommunale foretak som er skilt ut som egne enheter eller selskaper. Dette gjelder blant annet parkeringsselskap, biblioteker, interkommunale selskaper mm. Lovdata avgjør i tvilstilfeller om en enhet kan inkluderes i abonnementet.</p>
         </div>
       </section>
@@ -244,7 +211,7 @@ function App () {
           <div className="row">
             <div className="col-6">
               <address>
-                <a href="mailto:marked@lovdata.no">
+                <a href="tel:23 11 83 00">
                   <Icon type={ 'call' } />
                   <h2>23 11 83 00</h2>
                   <p>Snakk med en av våre konsulenter.<br/>Åpningstiden er fra 0800 - 1600.</p>
