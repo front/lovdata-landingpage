@@ -13,7 +13,7 @@
     background-image: url('./background.svg');
     background: url('./background.svg') no-repeat, linear-gradient(to bottom, $milano-red 80%, white 20%);
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: -2px 0px; // top center;
     background-size: auto;
   }
 

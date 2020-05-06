@@ -81,7 +81,7 @@ function App () {
 
   return (
     <Fragment>
-      <a href="#main" className="hidden">Skip to content</a>
+      <a href="#main" className="skip-main">Skip to main content</a>
       <HeaderSection onClickButton={ handleScrollToForm }>
         <div className="row">
           <div className="col-6">
