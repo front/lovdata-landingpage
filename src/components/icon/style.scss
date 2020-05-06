@@ -33,19 +33,25 @@
     height: 50px;
   }
 
-  &--notes:before {
+  &--call:before {
     content: "\e900";
   }
-  &--calendar:before {
+  &--email:before {
     content: "\e901";
   }
-  &--groups:before {
+  &--calendar:before {
     content: "\e902";
   }
-  &--notifications:before {
+  &--notes:before {
     content: "\e903";
   }
-  &--selection:before {
+  &--groups:before {
     content: "\e904";
+  }
+  &--notifications:before {
+    content: "\e905";
+  }
+  &--selection:before {
+    content: "\e906";
   }
 }

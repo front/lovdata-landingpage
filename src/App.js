@@ -10,13 +10,11 @@ import {
   Button,
   Card,
   Field,
+  Icon,
   List,
   ListItem,
   Spinner,
 } from './components';
-
-import iconEmail from './img/icon-email.png';
-import iconPhone from './img/icon-phone.png';
 
 function App () {
   let formRef = React.createRef();
@@ -209,7 +207,7 @@ function App () {
             <div className="col-6">
               <address>
                 <a href="mailto:marked@lovdata.no">
-                  <img src={ iconPhone } alt="Tel: 23 11 83 00" />
+                  <Icon type={ 'call' } />
                   <h2>23 11 83 00</h2>
                   <p>Snakk med en av våre konsulenter. Åpningstiden er fra 0800 - 1600.</p>
                 </a>
@@ -218,7 +216,7 @@ function App () {
             <div className="col-6">
               <address>
                 <a href="mailto:marked@lovdata.no">
-                  <img src={ iconEmail } alt="Mail: marked@lovdata.no" />
+                  <Icon type={ 'email' } />
                   <h2>marked@lovdata.no</h2>
                   <p>Send oss en e-post med det du lurer på. Tips: send med telefonnummeret ditt, så kan vi ringe deg opp igjen.</p>
                 </a>
