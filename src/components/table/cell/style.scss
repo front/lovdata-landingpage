@@ -1,0 +1,54 @@
+@import "../../../scss/common";
+
+.table-cell {
+  box-sizing: border-box;
+  padding: $grid-gap / 2;
+  text-align: left;
+
+  font-family: $font-family;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  word-break: break-all;
+
+  @include for-tablet-landscape-up {
+    padding: $grid-gap / 2 $grid-gap;
+    word-break: break-word;
+  }
+
+  &:nth-of-type(2n - 1){
+    justify-items: flex-start;
+    text-align: left;
+  }
+
+  &--bordered {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    text-align: center;
+    box-shadow: $box-shadow;
+
+    &:before {
+      content: '';
+      background-color: $alabaster;
+      position: absolute;
+      bottom: 0;
+      height: $grid-gap / 2;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      background-color: $alabaster;
+      position: absolute;
+      top: 0;
+      height: $grid-gap / 2;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+}

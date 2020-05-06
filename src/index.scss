@@ -23,7 +23,7 @@ section {
 }
 
 .cards-section {
-  padding: 2 * $grid-gap 0;
+  padding: 3 * $grid-gap 0;
 
   h2 {
     font-family: $font-family;
@@ -55,37 +55,8 @@ section {
 .prices-section {
   padding: 3 * $grid-gap 0;
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-
-    thead {
-      td {
-        width: 50%;
-        padding: $grid-gap;
-        font-size: 22px;
-        font-weight: 700;
-        text-align: center;
-      }
-    }
-
-    tbody {
-      tr {
-        background-color: #fafafa;
-
-        &:nth-last-of-type(2n - 1) {
-          background: #ffe4e1;
-        }
-
-        td {
-          padding: $grid-gap / 2 $grid-gap;
-        }
-      }
-    }
-  }
-
   p {
-    padding: $grid-gap 0;
+    padding-top: $grid-gap;
     color: $text-color-secondary;
   }
 }

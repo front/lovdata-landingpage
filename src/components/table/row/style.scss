@@ -1,0 +1,59 @@
+@import "../../../scss/common";
+
+.table-row {
+  display: grid;
+  grid-column-gap: $grid-gap / 3;
+  box-sizing: border-box;
+
+  @include for-tablet-landscape-up {
+    grid-column-gap: $grid-gap;
+  }
+
+  @for $i from 1 through 3 {
+		&--has-#{$i}-cols {
+      grid-template-columns: repeat($i, 1fr);
+
+      // @include for-tablet-landscape-up {
+      //   grid-template-columns: repeat($i, 1fr);
+      // }
+		}
+  }
+
+  &--has-background {
+    position: relative;
+    background-color: $alabaster;
+
+    &:nth-of-type(2n) {
+      background-color: #ffe4e1;
+
+      .table-cell {
+        &:before,
+        &:after {
+          background-color: #ffe4e1;
+        }
+      }
+    }
+
+    &:before {
+      content: '';
+      height: 1px;
+      background-color: white;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 2;
+    }
+
+    &:after {
+      content: '';
+      height: 1px;
+      background-color: white;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      z-index: 2;
+    }
+  }
+}

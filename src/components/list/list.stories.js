@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import List from './index';
-import ListItem from './list-item';
+import ListItem from './item';
 
 storiesOf('Basics|List', module)
   .add('all lists', () =>

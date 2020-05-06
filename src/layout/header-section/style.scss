@@ -1,11 +1,11 @@
 @import "../../scss/common";
 
 .header-section {
+  box-sizing: border-box;
   padding: $grid-gap 0;
   min-height: 597px;
 
-  background-image: url('./background.svg');
-  // background-image: url('./background.svg'), linear-gradient(to bottom, $milano-red 50%, white 50%);
+  background-color: $milano-red;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: auto;
@@ -13,7 +13,9 @@
   color: white;
 
   @include for-tablet-landscape-up {
-    // background: url('./background.svg') no-repeat, linear-gradient(to right, $milano-red 50%, white 50%);
+    padding-top: $grid-gap;
+    background-image: url('./background.svg');
+    //background: url('./background.svg') no-repeat, linear-gradient(to left, $milano-red 50%, white 50%);
   }
 
   header {

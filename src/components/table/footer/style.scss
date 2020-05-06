@@ -1,0 +1,32 @@
+@import "../../../scss/common";
+
+.table-footer {
+  padding: $grid-gap / 3;
+
+  @include for-tablet-landscape-up {
+    padding: $grid-gap;
+  }
+
+  &--bordered {
+    position: relative;
+    box-shadow: $box-shadow;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    &:before {
+      content: '';
+      background: white;
+      position: absolute;
+      top: 0;
+      height: $grid-gap / 3;
+      left: 0;
+      right: 0;
+      z-index: 1;
+
+      @include for-tablet-landscape-up {
+        height: $grid-gap;
+      }
+    }
+  }
+}

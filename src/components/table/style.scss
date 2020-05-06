@@ -1,0 +1,36 @@
+@import "../../scss/common";
+
+.table {
+  &--no-gap {
+    border-radius: 8px;
+    box-shadow: $box-shadow;
+
+    .table-row {
+      grid-column-gap: 0;
+
+      @include for-tablet-landscape-up {
+        grid-column-gap: 0;
+      }
+
+      .table-header {
+        &--bordered {
+          border-radius: 0;
+          box-shadow: none;
+        }
+      }
+
+      .table-cell {
+        &--bordered {
+          box-shadow: none;
+        }
+      }
+
+      .table-footer {
+        &--bordered {
+          border-radius: 0;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

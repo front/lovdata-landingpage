@@ -14,6 +14,11 @@ import {
   List,
   ListItem,
   Spinner,
+  Table,
+  TableCell,
+  TableFooter,
+  TableHeader,
+  TableRow,
 } from './components';
 
 function App () {
@@ -166,7 +171,7 @@ function App () {
 
       <section className="prices-section">
         <div className="container">
-          <table border="0">
+          { /* <table border="0">
             <thead>
               <tr>
                 <td>Pristrinn</td>
@@ -195,7 +200,40 @@ function App () {
                 <td>Egen avtale</td>
               </tr>
             </tbody>
-          </table>
+            </table> */ }
+
+
+          <Table>
+            <TableRow body={false}>
+              <TableHeader bordered>Pristrinn</TableHeader>
+              <TableHeader bordered>Pris</TableHeader>
+            </TableRow>
+            <TableRow>
+              <TableCell bordered>Pristrinn 10 (fra 1 til 20.000 innbyggere)</TableCell>
+              <TableCell bordered>kr 17 900</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell bordered>Pristrinn 20 (fra 20.001 til 40.000 innbyggere)</TableCell>
+              <TableCell bordered>kr 29 900</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell bordered>Pristrinn 30 (fra 40.001 til 60.000 innbyggere)</TableCell>
+              <TableCell bordered>kr 39 900</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell bordered>Pristrinn 40 (fra 60.001 til 80.000 innbyggere)</TableCell>
+              <TableCell bordered>kr 49 900</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell bordered>Over 80.000 innbyggere</TableCell>
+              <TableCell bordered>Egen avtale</TableCell>
+            </TableRow>
+            <TableRow  body={false}>
+              <TableFooter bordered></TableFooter>
+              <TableFooter bordered></TableFooter>
+            </TableRow>
+          </Table>
+
 
           <p>Alle kommunens ansatte med personlig e-postadresse på kommunens domene kan benytte seg av avtalen. Kunden faktureres på grunnlag av innbyggertallet i kommunen. Kommuneabonnement gjelder ikke for kommunale foretak som er skilt ut som egne enheter eller selskaper. Dette gjelder blant annet parkeringsselskap, biblioteker, interkommunale selskaper mm. Lovdata avgjør i tvilstilfeller om en enhet kan inkluderes i abonnementet.</p>
         </div>
@@ -209,7 +247,7 @@ function App () {
                 <a href="mailto:marked@lovdata.no">
                   <Icon type={ 'call' } />
                   <h2>23 11 83 00</h2>
-                  <p>Snakk med en av våre konsulenter. Åpningstiden er fra 0800 - 1600.</p>
+                  <p>Snakk med en av våre konsulenter.<br/>Åpningstiden er fra 0800 - 1600.</p>
                 </a>
               </address>
             </div>
