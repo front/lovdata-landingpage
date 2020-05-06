@@ -211,20 +211,16 @@ function App () {
           <div className="row">
             <div className="col-6">
               <address>
-                <a href="tel:23 11 83 00">
-                  <Icon type={ 'call' } />
-                  <h2>23 11 83 00</h2>
-                  <p>Snakk med en av våre konsulenter.<br/>Åpningstiden er fra 0800 - 1600.</p>
-                </a>
+                <Icon type={ 'call' } />
+                <h2><a href="tel:23 11 83 00">23 11 83 00</a></h2>
+                <p>Snakk med en av våre konsulenter.<br/>Åpningstiden er fra 0800 - 1600.</p>
               </address>
             </div>
             <div className="col-6">
               <address>
-                <a href="mailto:marked@lovdata.no">
-                  <Icon type={ 'email' } />
-                  <h2>marked@lovdata.no</h2>
-                  <p>Send oss en e-post med det du lurer på. Tips: send med telefonnummeret ditt, så kan vi ringe deg opp igjen.</p>
-                </a>
+                <Icon type={ 'email' } />
+                <h2><a href="mailto:marked@lovdata.no">marked@lovdata.no</a></h2>
+                <p>Send oss en e-post med det du lurer på. Tips: send med telefonnummeret ditt, så kan vi ringe deg opp igjen.</p>
               </address>
             </div>
           </div>
