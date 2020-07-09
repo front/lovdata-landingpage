@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/lovdata-landingpage/static/css/main.bf3138f2.chunk.css",
+    "main.js": "/lovdata-landingpage/static/js/main.7bc63a35.chunk.js",
+    "main.js.map": "/lovdata-landingpage/static/js/main.7bc63a35.chunk.js.map",
+    "runtime~main.js": "/lovdata-landingpage/static/js/runtime~main.d4871d19.js",
+    "runtime~main.js.map": "/lovdata-landingpage/static/js/runtime~main.d4871d19.js.map",
+    "static/js/2.04d30675.chunk.js": "/lovdata-landingpage/static/js/2.04d30675.chunk.js",
+    "static/js/2.04d30675.chunk.js.map": "/lovdata-landingpage/static/js/2.04d30675.chunk.js.map",
+    "index.html": "/lovdata-landingpage/index.html",
+    "precache-manifest.596c3527b0498b45e12db0e1726ff4a8.js": "/lovdata-landingpage/precache-manifest.596c3527b0498b45e12db0e1726ff4a8.js",
+    "service-worker.js": "/lovdata-landingpage/service-worker.js",
+    "static/css/main.bf3138f2.chunk.css.map": "/lovdata-landingpage/static/css/main.bf3138f2.chunk.css.map",
+    "static/media/index.scss": "/lovdata-landingpage/static/media/icomoon.cd830e1c.woff",
+    "static/media/style.scss": "/lovdata-landingpage/static/media/icon-check.476ae009.svg",
+    "static/media/logo-pro.png": "/lovdata-landingpage/static/media/logo-pro.0e7a1e49.png"
+  }
+}
