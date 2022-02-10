@@ -44,6 +44,6 @@
     "@storybook/react": "^5.0.11",
     "babel-loader": "8.0.5",
     "eslint-config-react-app": "^5.2.1",
-    "node-sass": "^4.12.0"
+    "node-sass": "^7.0.0"
   }
 }
